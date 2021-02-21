@@ -1,10 +1,6 @@
-<section class="comments">
-  <script src="https://utteranc.es/client.js"
-    repo="#"
-    issue-term="pathname"
-    label="Comment 💬"
-    theme="github-light"
-    crossorigin="anonymous"
-    async>
-  </script>
-</section>
+{% if page.comments %}
+  {% include disqus.html %}
+  {% include fb-comment.html %}
+  {% include staticman-comments.html %}
+  {% include utterances-comment.html %}
+{% endif %}
